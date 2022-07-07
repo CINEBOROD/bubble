@@ -1,0 +1,16 @@
+# сортировка пузырьком
+
+num_list = []
+
+amount_num = int(input('Введите кол-во цифр:\n'))
+
+for i in range(amount_num):
+    num = int(input('Введите число: '))
+    num_list.append(num)   
+print(num_list)
+
+for i in range(amount_num-1):
+    for j in range(amount_num-i-1):
+        if num_list[j] > num_list[j+1]:
+            num_list[j], num_list[j+1] = num_list[j+1], num_list[j]
+print(num_list)
